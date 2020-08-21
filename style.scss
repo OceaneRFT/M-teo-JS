@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#day {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    // background-image: url(assets/bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    color: beige;
+    & .globale {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+        & header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50 px 15px 15px;
+        }
+        & #location {
+            & .name,
+            .condition,
+            .hour,
+            .date {
+                font-size: 24px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            & .tempIcon.row {
+                display: flex;
+                justify-content: center;
+            }
+            & .row.d-flex {
+                width: 90%;
+                padding: 25px;
+                margin: auto;
+                & .hoursDay.col {
+                    display: flex;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}
+
+.accordion {
+    display: none;
+    & .dayThree,
+    .dayOne,
+    .dayTwo,
+    .dayFour {
+        color: black;
+    }
+    & .card.z-depth-0.bordered {
+        background: rgba(255, 255, 255, 0.767);
+    }
+}
+
+// option d'affichage accordion
+.disappearance {
+    display: none;
+}
+.display {
+    display: block;
+}
+
+// barre de defilement
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;  
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to top, #5a6c8c 0%, #57647514 100%);
+}
+
+.scrollbar {
+    scrollbar-color: #b490ca #f5f5f5;
+}
+
+.results-list span{
+    padding: 0;
+}

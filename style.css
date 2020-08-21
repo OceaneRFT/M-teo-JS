@@ -15,6 +15,7 @@
 }
 
 body {
+  background-image: url(assets/bg.jpg);
   background-size: cover;
   background-position: top center;
   color: beige;
@@ -46,16 +47,16 @@ body .globale header {
   padding: 50 px 15px 15px;
 }
 
-body .globale #location .name,
-body .globale #location .condition,
-body .globale #location .hour,
-body .globale #location .date {
+body .globale #weatherDayJ .name,
+body .globale #weatherDayJ .condition,
+body .globale #weatherDayJ .hour,
+body .globale #weatherDayJ .date {
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
 }
 
-body .globale #location .tempIcon.row {
+body .globale #weatherDayJ .tempIcon.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,13 +65,13 @@ body .globale #location .tempIcon.row {
           justify-content: center;
 }
 
-body .globale #location .row.d-flex {
+body .globale #weatherDayJ .row.d-flex {
   width: 90%;
   padding: 25px;
   margin: auto;
 }
 
-body .globale #location .row.d-flex .hoursDay.col {
+body .globale #weatherDayJ .row.d-flex .hoursDay.col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

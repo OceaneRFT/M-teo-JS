@@ -1,6 +1,4 @@
 const $name = document.querySelector('.name');
-// const $wind = document.querySelector('.wind');
-// const $humidity = document.querySelector('.humidity');
 const $temperate = document.querySelector('.temperate');
 const $cityResearch = document.querySelector('.Citysearch');
 const $date = document.querySelector('.date');
@@ -87,8 +85,6 @@ const meteo = function() {
     fetch(url)
         .then(valueSite => valueSite.json())
         .then(function(valueSite) {
-            // $wind.innerHTML = valueSite.current_condition.wnd_spd + " " + valueSite.current_condition.wnd_dir;
-            // $humidity.innerHTML = valueSite.current_condition.humidity;
             $name.innerHTML = valueSite.city_info.name;
             $temperate.innerHTML = valueSite.current_condition.tmp + '°C';
             $date.innerHTML = valueSite.fcst_day_0.day_long + " " + valueSite.current_condition.date;

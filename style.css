@@ -93,6 +93,10 @@ body .globale #weatherDayJ .row.d-flex .hoursDay.col {
   background: rgba(255, 255, 255, 0.767);
 }
 
+div#accordionExample {
+  color: black;
+}
+
 .disappearance {
   display: none;
 }

@@ -128,10 +128,62 @@ div#accordionExample {
 }
 
 .results-list {
-  top: 38px;
+  top: 80px;
 }
 
 .results-listspan {
   padding: 0;
+}
+
+body.sunny {
+  background-image: url(assets/ensoleille.webp);
+}
+
+body.thinning {
+  background-image: url(assets/eclaircies.jpg);
+}
+
+body.cloudy {
+  background-image: url(assets/voile.jpg);
+}
+
+body.storm {
+  background-image: url(assets/orage.jpg);
+}
+
+body.night {
+  background-image: url(assets/night.jpg);
+}
+
+body.clearNight {
+  background-image: url(assets/nuitclaire.jpg);
+}
+
+body.cloudyNight {
+  background-image: url(assets/nuitnuageuse.jpg);
+}
+
+body.rainNight {
+  background-image: url(assets/pluienight.jpg);
+}
+
+body.rainDay {
+  background-image: url(assets/pluieday.jpg);
+}
+
+body.snow {
+  background-image: url(assets/neige.jpg);
+}
+
+body.heavySnow {
+  background-image: url(assets/neigeforte.jpeg);
+}
+
+body.mist {
+  background-image: url(assets/brouillard.jpg);
+}
+
+body.stratus {
+  background-image: url(assets/stratus.jpg);
 }
 /*# sourceMappingURL=style.css.map */

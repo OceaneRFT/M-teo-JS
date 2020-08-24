@@ -28,54 +28,54 @@ let url;
 // --------------------------------------------background section------------------------------------------------
 const background = {
 
-    "Eclaircies": 'url(assets/eclaircies.jpg)',
-    "Ensoleillé": 'url(assets/ensoleille.webp)',
+    "Eclaircies": 'thinning',
+    "Ensoleillé": 'sunny',
 
-    "Ciel voilé": 'url(assets/voile.jpg)',
-    "Faiblement nuageux": 'url(assets/voile.jpg)',
-    "Nuit claire": 'url(assets/nuitclaire.jpg)',
+    "Ciel voilé": 'cloudy',
+    "Faiblement nuageux": 'cloudy',
+    "Nuit claire": 'clearNight',
 
-    "Brouillard": 'url(assets/brouillard.jpg)',
-    "Stratus": 'url(assets/stratus.jpg)',
-    "Stratus se dissipant": 'url(assets/brouillard.jpg)',
-    "Fortement nuageux": 'url(assets/stratus.jpg)',
+    "Brouillard": 'mist',
+    "Stratus": 'stratus',
+    "Stratus se dissipant": 'mist',
+    "Fortement nuageux": 'stratus ',
 
-    "Pluie faible": 'url(assets/pluieday.jpg)',
-    "Pluie forte": 'url(assets/pluieday.jpg)',
-    "Pluie modérée": 'url(assets/pluieday.jpg)',
-    "Averses de pluie modérée": 'url(assets/pluieday.jpg)',
-    "Averses de pluie forte": 'url(assets/pluieday.jpg)',
-    "Averses de pluie faible": 'url(assets/pluieday.jpg)',
+    "Pluie faible": 'rainDay',
+    "Pluie forte": 'rainDay',
+    "Pluie modérée": 'rainDay',
+    "Averses de pluie modérée": 'rainDay',
+    "Averses de pluie forte": 'rainDay',
+    "Averses de pluie faible": 'rainDay',
 
-    "Nuit avec averses": 'url(assets/pluienight.jpg)',
-    "Couvert avec averses": 'url(assets/pluienight.jpg)',
+    "Nuit avec averses": 'rainNight',
+    "Couvert avec averses": 'rainNight',
 
-    "Nuit légèrement voilée": 'url(assets/night.jpg)',
-    "Faibles passages nuageux": 'url(assets/voile.jpg)',
-    "Nuit bien dégagée": 'url(assets/nuitclaire.jpg)',
-    "Nuit claire et stratus": 'url(assets/nuitclaire.jpg)',
+    "Nuit légèrement voilée": 'night',
+    "Faibles passages nuageux": 'cloudy',
+    "Nuit bien dégagée": 'clearNight',
+    "Nuit claire et stratus": 'clearNight',
 
-    "Développement nuageux": 'url(assets/voile.jpg)',
-    "Nuit avec développement nuageux": 'url(assets/nuitnuageuse.jpg)',
-    "Nuit nuageuse": 'url(assets/nuit nuageuse.jpg)',
+    "Développement nuageux": 'cloudy',
+    "Nuit avec développement nuageux": 'cloudyNight',
+    "Nuit nuageuse": 'cloudyNight',
 
-    "Faiblement orageux": 'url(assets/nuitnuageuse.jpg)',
-    "Nuit faiblement orageuse": 'url(assets/nuitnuageuse.jpg)',
-    "Orage modéré": 'url(assets/orage.jpg)',
-    "Fortement orageux": 'url(assets/orage.jpg)',
+    "Faiblement orageux": 'cloudyNight',
+    "Nuit faiblement orageuse": 'cloudyNight',
+    "Orage modéré": 'storm',
+    "Fortement orageux": 'storm',
 
-    "Nuit avec averses de neige faible": 'url(assets/pluienight.jpg)',
+    "Nuit avec averses de neige faible": 'rainNight',
 
-    "Neige faible": 'url(assets/neige.jpg)',
-    "Neige modérée": 'url(assets/neigeforte.jpeg)',
-    "Neige forte": 'url(assets/neigeforte.jpeg)',
-    "Averses de neige faible": 'url(assets/neige.jpg)',
-    "Pluie et neige mêlée faible": 'url(assets/neige.jpg)',
-    "Pluie et neige mêlée modérée": 'url(assets/neige.jpg)',
-    "Pluie et neige mêlée forte": 'url(assets/neigeforte.jpeg)',
+    "Neige faible": 'snow',
+    "Neige modérée": 'clearNight',
+    "Neige forte": 'clearNight',
+    "Averses de neige faible": 'snow',
+    "Pluie et neige mêlée faible": 'snow',
+    "Pluie et neige mêlée modérée": 'snow',
+    "Pluie et neige mêlée forte": 'clearNight',
 }
 
-function getImages(key) {
+function getBodyClassName(key) {
     return background[key];
 }
 
@@ -93,7 +93,7 @@ const meteo = function() {
             $hour.innerHTML = valueSite.current_condition.hour;
             currentHour = valueSite.current_condition.hour;
             condition = valueSite.current_condition.condition;
-
+            $condition.innerHTML = valueSite.current_condition.condition;
             for (i = 0; i < 4; i++) {
                 const dayNumb = {
                     day: document.querySelector('.day' + (i + 1)),
@@ -105,8 +105,8 @@ const meteo = function() {
                 array[i].dayLong.innerHTML = dayWeather.day_long;
                 array[i].day.innerHTML = dayWeather.day_long + " " + dayWeather.date + " " +`<img src="` + dayWeather.icon + `">` + dayWeather.condition;
             }
-            let result = getImages(valueSite.current_condition.condition);
-            $body.style.backgroundImage = result;
+            let className = getBodyClassName(valueSite.current_condition.condition);
+            $body.className = className;
 
             weatherbyHour(valueSite);
         })

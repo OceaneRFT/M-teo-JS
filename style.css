@@ -127,7 +127,11 @@ div#accordionExample {
   scrollbar-color: #b490ca #f5f5f5;
 }
 
-.results-list span {
+.results-list {
+  top: 38px;
+}
+
+.results-listspan {
   padding: 0;
 }
 /*# sourceMappingURL=style.css.map */

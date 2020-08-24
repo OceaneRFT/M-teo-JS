@@ -204,8 +204,8 @@ function getInputCity() {
 }
 // --------------------------------------------auto completion-------------------------------------------- 
 let data = [];
-let res = `https://cors-anywhere.herokuapp.com/https://www.prevision-meteo.ch/services/json/list-cities`;
-fetch(res)
+let listCity = `https://cors-anywhere.herokuapp.com/https://www.prevision-meteo.ch/services/json/list-cities`;
+fetch(listCity)
     .then(function(valueSite) {
         return valueSite.json();
     })

@@ -98,6 +98,9 @@ div#accordionExample {
 }
 
 // barre de recherche
-.results-list span {
-    padding: 0;
+.results-list {
+    top: 38px;
+    &span {
+        padding: 0;
+    }
 }

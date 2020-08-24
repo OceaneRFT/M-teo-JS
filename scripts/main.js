@@ -103,7 +103,7 @@ const meteo = function() {
                 const dayKey = "fcst_day_" + (i + 1);
                 const dayWeather = valueSite[dayKey];
                 array[i].dayLong.innerHTML = dayWeather.day_long;
-                array[i].day.innerHTML = `<img src="` + dayWeather.icon + `">` + dayWeather.condition;
+                array[i].day.innerHTML = dayWeather.day_long + " " + dayWeather.date + " " +`<img src="` + dayWeather.icon + `">` + dayWeather.condition;
             }
             let result = getImages(valueSite.current_condition.condition);
             $body.style.backgroundImage = result;

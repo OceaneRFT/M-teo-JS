@@ -78,7 +78,6 @@ const meteo = function (url) {
             $temperate.innerHTML = valueSite.current_condition.tmp + '°C';
             $date.innerHTML = valueSite.fcst_day_0.day_long + " " + valueSite.current_condition.date;
             $iconMeteo.innerHTML = `<img src="` + valueSite.current_condition.icon_big + `">`;
-
             $hour.innerHTML = valueSite.current_condition.hour;
             let currentHour = valueSite.current_condition.hour;
             condition = valueSite.current_condition.condition;
@@ -105,8 +104,6 @@ const meteo = function (url) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
             alert('Ville non reconnue' + error);
-            url = 'https://prevision-meteo.ch/services/json/' + 'toulon';
-            meteo(url)
         })
 }
 $cityResearch.addEventListener('change', function () {
@@ -174,8 +171,6 @@ function setPosition(position) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
             alert('Ville non reconnue' + error);
-            url = 'https://prevision-meteo.ch/services/json/' + 'toulon';
-            meteo(url);
         })
 }
 

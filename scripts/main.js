@@ -114,7 +114,7 @@ $cityResearch.addEventListener('change', function () {
 
 // --------------------------------------------weather hours per hours for actually day --------------------------------------------
 const addHoursDay = function (hour, hourIcon, hourTemp) {
-    
+
     const $div = document.createElement('div');
     $div.className = 'dayHours';
     $div.innerHTML = '<p>' + hour + '</p>' + '<p> <img src="' + hourIcon + '"> </p>' + '<p>' + hourTemp + ' °C</p>';
@@ -172,6 +172,8 @@ function setPosition(position) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
             alert('Ville non reconnue' + error);
+            url = 'https://prevision-meteo.ch/services/json/' + 'toulon';
+            meteo(url)
         })
 }
 

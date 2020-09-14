@@ -10,7 +10,7 @@ const weatherDay = document.querySelector('#weatherDayJ');
 const $divHoursDay = document.querySelector('.hoursDay');
 const $body = document.querySelector('body');
 const apiKey = '750b94eb06c8709df87866b1e730d487';
-let name;
+
 let condition;
 let array = [];
 

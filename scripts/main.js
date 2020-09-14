@@ -105,6 +105,8 @@ const meteo = function (url) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
             alert('Ville non reconnue' + error);
+            url = 'https://prevision-meteo.ch/services/json/' + 'toulon';
+            meteo(url)
         })
 }
 $cityResearch.addEventListener('change', function () {
@@ -173,7 +175,7 @@ function setPosition(position) {
             weatherDay.classList.add('disappearance');
             alert('Ville non reconnue' + error);
             url = 'https://prevision-meteo.ch/services/json/' + 'toulon';
-            meteo(url)
+            meteo(url);
         })
 }
 

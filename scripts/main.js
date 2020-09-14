@@ -103,7 +103,7 @@ const meteo = function (url) {
         .catch(function (error) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
-            alert('Ville non reconnue' + error);
+            alert('Ville non reconnue, indiquez la plus bas');
         })
 }
 $cityResearch.addEventListener('change', function () {
@@ -170,7 +170,7 @@ function setPosition(position) {
         .catch(function (error) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
-            alert('Ville non reconnue' + error);
+            alert('Ville non reconnue, indiquez la plus bas');
         })
 }
 
@@ -183,7 +183,7 @@ if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 } else {
     notificationElement.style.display = "block";
-    notificationElement.innerHTML = "<p>Browser don't support geolocation</p>"
+    notificationElement.innerHTML = "<p>Votre explorateur ne supporte pas la géocalisation</p>"
 }
 
 function getInputCity() {

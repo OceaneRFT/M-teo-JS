@@ -103,7 +103,7 @@ const meteo = function (url) {
         .catch(function (error) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
-            alert('Ville non reconnue, indiquez la plus bas');
+            alert("Ville non reconnue,merci de l'inscrire ci-dessous");
         })
 }
 $cityResearch.addEventListener('change', function () {
@@ -170,7 +170,7 @@ function setPosition(position) {
         .catch(function (error) {
             accordion.classList.remove('display');
             weatherDay.classList.add('disappearance');
-            alert('Ville non reconnue, indiquez la plus bas');
+            alert("Ville non reconnue,merci de l'inscrire ci-dessous");
         })
 }
 
